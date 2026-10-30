@@ -1,0 +1,97 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081"
+	},
+	"version": "v1.0.0",
+	"id": "zeptoreal.deathtrackerpro",
+	"name": "Death Tracker Pro",
+	"developer": "Zeptoreal",
+	"description": "Tracks every attempt and death per level: death map, progress graph, session stats and a detailed stats menu. Data is saved between sessions.",
+	"tags": ["interface", "utility", "offline"],
+	"settings": {
+		"hud-enabled": {
+			"name": "Session HUD",
+			"description": "Shows attempts, deaths and best percentage for the current session while you play.",
+			"type": "bool",
+			"default": true
+		},
+		"hud-corner": {
+			"name": "HUD corner",
+			"description": "Where the session HUD is placed on screen.",
+			"type": "string",
+			"default": "Top Left",
+			"one-of": ["Top Left", "Top Right", "Bottom Left", "Bottom Right"]
+		},
+		"hud-scale": {
+			"name": "HUD size",
+			"description": "Size of the session HUD.",
+			"type": "float",
+			"default": 0.7,
+			"min": 0.3,
+			"max": 1.5,
+			"control": { "slider": true }
+		},
+		"hud-opacity": {
+			"name": "HUD opacity (%)",
+			"description": "How visible the session HUD is.",
+			"type": "int",
+			"default": 70,
+			"min": 10,
+			"max": 100,
+			"control": { "slider": true }
+		},
+		"hud-show-attempts": {
+			"name": "HUD: show attempts",
+			"type": "bool",
+			"default": true
+		},
+		"hud-show-deaths": {
+			"name": "HUD: show deaths",
+			"type": "bool",
+			"default": true
+		},
+		"hud-show-best": {
+			"name": "HUD: show best %",
+			"type": "bool",
+			"default": true
+		},
+		"accent-color": {
+			"name": "Accent color",
+			"description": "Main color of the stats menu, charts and HUD highlights.",
+			"type": "color",
+			"default": "#4DA6FF"
+		},
+		"death-map-bucket": {
+			"name": "Death map detail (% per bar)",
+			"description": "How many percent points each bar of the death map covers. 1 = most detailed.",
+			"type": "int",
+			"default": 2,
+			"min": 1,
+			"max": 10,
+			"control": { "slider": true }
+		},
+		"track-practice": {
+			"name": "Track Practice Mode",
+			"description": "Also record attempts and deaths made in Practice Mode (they never change your normal best %).",
+			"type": "bool",
+			"default": false
+		},
+		"pause-button-corner": {
+			"name": "Pause menu button corner",
+			"description": "Where the Stats button appears in the pause menu.",
+			"type": "string",
+			"default": "Bottom Left",
+			"one-of": ["Bottom Left", "Bottom Right", "Top Left", "Top Right"]
+		},
+		"pause-button-scale": {
+			"name": "Pause menu button size",
+			"type": "float",
+			"default": 0.8,
+			"min": 0.4,
+			"max": 1.5,
+			"control": { "slider": true }
+		}
+	}
+}
