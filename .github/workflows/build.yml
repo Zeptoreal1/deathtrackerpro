@@ -1,1 +1,29 @@
 
+name: Build Death Tracker Pro
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Android
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Geode mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          target: Android64
+
+      - name: Upload Android build
+        uses: actions/upload-artifact@v4
+        with:
+          name: DeathTrackerPro-Android
+          path: ${{ steps.build.outputs.build-output }}/*.geode
